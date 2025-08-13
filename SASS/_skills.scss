@@ -1,10 +1,28 @@
-@use './variables';
+@use './variables' as v;
 
-.skills {
-    
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--color-principal);
-}
+/* ===== Responsividad ===== */
+@media (max-width: 768px) {
+    .main-nav.active {
+        display: block;
+        background-color: v.$color-principal;
+        padding: 1rem;
+    }
 
+    .main-nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+    }
 }
