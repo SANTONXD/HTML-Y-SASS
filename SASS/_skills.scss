@@ -1,44 +1,39 @@
 @use './variables' as v;
 
-/* ===== Responsividad ===== */
 @media (max-width: 768px) {
-    /* Botón hamburguesa visible en móvil */
+    /* Mostrar botón hamburguesa */
     .menu-toggle {
         display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
     }
 
-    /* Ocultar menú por defecto en móvil */
+    /* Ocultar menú en móviles */
     .main-nav {
         display: none;
-        position: absolute;
-        top: 60px; /* Ajusta según tu header */
-        right: 0;
-        width: 200px;
-        background-color: v.$color-principal;
-        padding: 1rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Menú cuando está activo */
+    /* Mostrar menú cuando tenga la clase .active */
     .main-nav.active {
         display: block;
+        background-color: v.$color-principal;
+        padding: 1rem;
     }
 
-    /* Items del menú en columna */
     .main-nav ul li {
         display: block;
         margin: 10px 0;
     }
 
-    /* Ajuste de contacto en móvil */
+    /* Contacto en columna */
     .contact-container {
         flex-direction: column;
         text-align: center;
     }
 
-    /* Foto más pequeña */
     .profile-pic {
         width: 120px;
     }
 }
-
